@@ -1,0 +1,86 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+    height: 100vh;
+    background-color: #6078ff;
+}
+.area-menu{
+    position: relative;
+    color: #0f163b;
+}
+menu{
+    width: 150px;
+    border-radius: 10px;
+    overflow: hidden;
+    background-color: beige;
+    transition: .5s;
+}
+.area-menu.active menu{
+    width: 40px;
+}
+menu .option{
+    display: flex;
+    justify-content: left;
+    height: 40px;
+    align-items: center;
+    transition: .3s;
+    cursor: pointer;
+}
+menu .option:hover{
+    background-color: #dadacc;
+}
+menu .option .area-icon{
+    width: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    pointer-events: none;
+}
+menu .option .name-icon{
+    padding: 0 10px;
+    width: 100px;
+    font-weight: 600;
+    position: none;
+    transition: .5s;
+    opacity: 1;
+}
+.area-menu.active menu .option .name-icon{
+    width: 0px;
+    padding: 0;
+    margin: 0;
+    opacity: 0;
+}
+.area-menu .controller{
+    position: absolute;
+    top: 50%;
+    left: 100%;
+    transform: translate(-50%, -50%);
+    z-index: 1000;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    border: 4px solid #6078ff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: beige;
+    cursor: pointer;
+    transition: .5s;
+}
+.area-menu .controller i{
+    transform: rotate(180deg);
+}
+.area-menu.active .controller i{
+    transform: rotate(0deg);
+}
+.area-menu .controller:hover{
+    background-color: #dadacc;
+}
